@@ -1,9 +1,33 @@
-:root {
-    --main-color: #9356dc;
-    --secondary-color: #99e2d0;
-    --new-btn-text-color: #008766;
+$main-color: #9356dc;
+$secondary-color: #99e2d0;
+$new-btn-text-color: #008766;
+
+@mixin centerElement {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin centerText {
+    text-align: center;
 }
 
 body {
-    margin: 0px;
+	margin: 0px;
 }
+
+.logo, .location, .booking {
+	@include centerElement();
+}
+
+.booking {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+/* For screens wider than 768px */
+@media screen and (min-width: 768px) {
+
+}/*# sourceMappingURL=style.css.map */

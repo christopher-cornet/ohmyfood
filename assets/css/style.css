@@ -1,9 +1,16 @@
-:root {
-  --main-color: #9356dc;
-  --secondary-color: #99e2d0;
-  --new-btn-text-color: #008766;
-}
-
 body {
   margin: 0px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.logo, .location, .booking {
+  display: flex;
+  justify-content: center;
+}
+
+.booking {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* For screens wider than 768px */
+/*# sourceMappingURL=style.css.map */
