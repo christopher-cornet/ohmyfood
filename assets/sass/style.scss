@@ -12,16 +12,30 @@ $operation-steps-bg-color: rgb(245, 245, 245);
     text-align: center;
 }
 
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
 body {
 	margin: 0px;
 }
 
+.logo-ohmyfood {
+    color: #fff;
+}
+
 .location {
     background-color: rgb(235, 235, 235);
+    &__city {
+        font-weight: 700;
+    }
 }
 
 .logo, .location, .booking {
 	@include centerElement();
+}
+
+.logo {
     img {
         padding: 20px;
         padding-bottom: 10px;
@@ -40,7 +54,7 @@ body {
         margin: 0px 20px;
         padding: 20px 0px
     }
-    .booking__button {
+    &__button {
         padding: 15px 20px;
         border-radius: 25px;
         border: none;
@@ -50,8 +64,28 @@ body {
     }
 }
 
+.restaurants {
+    padding-top: 25px;
+    padding-bottom: 50px;
+    &__title, &__card {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    &__card {
+        background-color: #fff;
+        border-radius: 25px;
+    }
+    &__card > img {
+        max-width: 100%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        background-size: cover;
+    }
+}
+
 .operation-steps {
     margin-top: 50px;
+    margin-bottom: 50px;
     &__title {
         margin-left: 20px
     }
@@ -80,7 +114,6 @@ body {
 footer {
     background-color: rgb(50, 50, 50);
     padding: 25px;
-    margin-top: 50px;
 }
 
 .contact {
@@ -88,9 +121,6 @@ footer {
         color: white;
         text-decoration: none;
     }
-    // .contact__link {
-    //     color: white;
-    // }
 }
 
 /* For screens wider than 768px */
