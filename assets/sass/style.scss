@@ -12,16 +12,16 @@ $operation-steps-bg-color: rgb(245, 245, 245);
     text-align: center;
 }
 
+@mixin operationSteps-bgColor {
+    background-color: $operation-steps-bg-color;
+}
+
 * {
     font-family: 'Raleway', sans-serif;
 }
 
 body {
 	margin: 0px;
-}
-
-.logo-ohmyfood {
-    color: #fff;
 }
 
 .location {
@@ -42,17 +42,17 @@ body {
     }
 }
 
-.booking__title {
-    margin: 10px 10px 0px 10px;
-}
-
 .booking {
 	@include centerText();
+    @include operationSteps-bgColor();
     flex-direction: column;
     align-items: center;
-    div {
+    article {
         margin: 0px 20px;
-        padding: 20px 0px
+        padding: 20px 0px 50px 0px;
+    }
+    &__explore {
+        margin-top: 25px;
     }
     &__button {
         padding: 15px 20px;
@@ -62,9 +62,13 @@ body {
         box-shadow: 0px 3px 10px 2px rgb(175, 175, 175);
         color: white;
     }
+    &__title {
+        margin: 10px 10px 0px 10px;
+    }
 }
 
 .restaurants {
+    @include operationSteps-bgColor();
     padding-top: 25px;
     padding-bottom: 50px;
     &__title, &__card {
@@ -89,18 +93,13 @@ body {
     &__title {
         margin-left: 20px
     }
-}
-
-.operation-steps__card {
-	@include centerElement();
-    margin: 15px 20px 10px 20px;
-    border-radius: 15px;
-    background-color: $operation-steps-bg-color;
-    font-weight: 700;
-}
-
-.booking, .restaurants {
-    background-color: $operation-steps-bg-color;
+    &__card {
+        @include centerElement();
+        margin: 15px 20px 10px 20px;
+        border-radius: 15px;
+        background-color: $operation-steps-bg-color;
+        font-weight: 700;
+    }
 }
 
 .fa-location-dot {
@@ -117,9 +116,10 @@ footer {
 }
 
 .contact {
-    a, .contact__link {
+    a, &__link {
         color: white;
         text-decoration: none;
+        margin-bottom: 0;
     }
 }
 

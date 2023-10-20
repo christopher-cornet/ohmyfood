@@ -6,10 +6,6 @@ body {
   margin: 0px;
 }
 
-.logo-ohmyfood {
-  color: #fff;
-}
-
 .location {
   background-color: rgb(235, 235, 235);
 }
@@ -27,18 +23,18 @@ body {
   padding-bottom: 10px;
 }
 
-.booking__title {
-  margin: 10px 10px 0px 10px;
-}
-
 .booking {
   text-align: center;
+  background-color: rgb(245, 245, 245);
   flex-direction: column;
   align-items: center;
 }
-.booking div {
+.booking article {
   margin: 0px 20px;
-  padding: 20px 0px;
+  padding: 20px 0px 50px 0px;
+}
+.booking__explore {
+  margin-top: 25px;
 }
 .booking__button {
   padding: 15px 20px;
@@ -48,8 +44,12 @@ body {
   box-shadow: 0px 3px 10px 2px rgb(175, 175, 175);
   color: white;
 }
+.booking__title {
+  margin: 10px 10px 0px 10px;
+}
 
 .restaurants {
+  background-color: rgb(245, 245, 245);
   padding-top: 25px;
   padding-bottom: 50px;
 }
@@ -75,7 +75,6 @@ body {
 .operation-steps__title {
   margin-left: 20px;
 }
-
 .operation-steps__card {
   display: flex;
   justify-content: center;
@@ -83,10 +82,6 @@ body {
   border-radius: 15px;
   background-color: rgb(245, 245, 245);
   font-weight: 700;
-}
-
-.booking, .restaurants {
-  background-color: rgb(245, 245, 245);
 }
 
 .fa-location-dot {
@@ -102,9 +97,10 @@ footer {
   padding: 25px;
 }
 
-.contact a, .contact .contact__link {
+.contact a, .contact__link {
   color: white;
   text-decoration: none;
+  margin-bottom: 0;
 }
 
 /* For screens wider than 768px */
