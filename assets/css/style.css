@@ -2,14 +2,78 @@ body {
   margin: 0px;
 }
 
+.location {
+  background-color: rgb(235, 235, 235);
+}
+
 .logo, .location, .booking {
   display: flex;
   justify-content: center;
 }
+.logo img, .location img, .booking img {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.booking__title {
+  margin: 10px 10px 0px 10px;
+}
 
 .booking {
+  text-align: center;
   flex-direction: column;
   align-items: center;
+}
+.booking div {
+  margin: 0px 20px;
+  padding: 20px 0px;
+}
+.booking .booking__button {
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(#d66cda, #9356dc);
+  box-shadow: 0px 3px 10px 2px rgb(175, 175, 175);
+  color: white;
+}
+
+.operation-steps {
+  margin-top: 50px;
+}
+.operation-steps__title {
+  margin-left: 20px;
+}
+
+.operation-steps__card {
+  display: flex;
+  justify-content: center;
+  margin: 15px 20px 10px 20px;
+  border-radius: 15px;
+  background-color: rgb(245, 245, 245);
+  font-weight: 700;
+}
+
+.booking, .restaurants {
+  background-color: rgb(245, 245, 245);
+}
+
+.fa-location-dot {
+  padding-right: 15px;
+}
+
+.fa-utensils, .fa-handshake-angle {
+  width: 35px;
+}
+
+footer {
+  background-color: rgb(50, 50, 50);
+  padding: 25px;
+  margin-top: 50px;
+}
+
+.contact a, .contact .contact__link {
+  color: white;
+  text-decoration: none;
 }
 
 /* For screens wider than 768px */
