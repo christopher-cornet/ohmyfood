@@ -60,12 +60,35 @@ body {
 .restaurants__card {
   background-color: #fff;
   border-radius: 25px;
+  margin-bottom: 25px;
 }
 .restaurants__card > img {
+  min-width: 100%;
   max-width: 100%;
+  max-height: 280px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurants__textheart {
+  display: flex;
+  justify-content: space-between;
+}
+.restaurants__textheart article {
+  padding-left: 20px;
+}
+.restaurants__textheart article h3 {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+.restaurants__textheart article p {
+  margin-top: 5px;
+}
+.restaurants__textheart div {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
 }
 
 .operation-steps {

@@ -78,12 +78,34 @@ body {
     &__card {
         background-color: #fff;
         border-radius: 25px;
+        margin-bottom: 25px;
     }
     &__card > img {
+        min-width: 100%;
         max-width: 100%;
+        max-height: 280px;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        background-size: cover;
+        object-fit: cover;
+    }
+    &__textheart {
+        display: flex;
+        justify-content: space-between;
+        article {
+            padding-left: 20px;
+            h3 {
+                margin-bottom: 0;
+                margin-top: 15px;
+            }
+            p {
+                margin-top: 5px;
+            }
+        }
+        div {
+            display: flex;
+            align-items: center;
+            padding-right: 50px;
+        }
     }
 }
 
