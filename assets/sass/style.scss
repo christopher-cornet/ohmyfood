@@ -76,7 +76,7 @@ body {
         margin-right: 20px;
     }
     &__card {
-        background-color: #fff;
+        background-color: white;
         border-radius: 25px;
         margin-bottom: 25px;
     }
@@ -116,11 +116,27 @@ body {
         margin-left: 20px
     }
     &__card {
-        @include centerElement();
         margin: 15px 20px 10px 20px;
         border-radius: 15px;
         background-color: $operation-steps-bg-color;
         font-weight: 700;
+        padding: 10px;
+        div {
+            display: flex;
+            justify-content: space-between;
+            max-width: 70%;
+            align-items: center;
+        }
+    }
+    &__number {
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        background-color: $main-color;
+        text-align: center;
+        color: white;
+        position: relative;
+        right: 18px;
     }
 }
 

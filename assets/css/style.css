@@ -58,7 +58,7 @@ body {
   margin-right: 20px;
 }
 .restaurants__card {
-  background-color: #fff;
+  background-color: white;
   border-radius: 25px;
   margin-bottom: 25px;
 }
@@ -99,12 +99,27 @@ body {
   margin-left: 20px;
 }
 .operation-steps__card {
-  display: flex;
-  justify-content: center;
   margin: 15px 20px 10px 20px;
   border-radius: 15px;
   background-color: rgb(245, 245, 245);
   font-weight: 700;
+  padding: 10px;
+}
+.operation-steps__card div {
+  display: flex;
+  justify-content: space-between;
+  max-width: 70%;
+  align-items: center;
+}
+.operation-steps__number {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: #9356dc;
+  text-align: center;
+  color: white;
+  position: relative;
+  right: 18px;
 }
 
 .fa-location-dot {
