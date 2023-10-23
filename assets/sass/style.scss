@@ -3,17 +3,25 @@ $secondary-color: #99e2d0;
 $new-btn-text-color: #008766;
 $operation-steps-bg-color: rgb(245, 245, 245);
 
-@mixin centerElement {
+@mixin DisplayFlex-Justify-content ($justify-content) {
     display: flex;
-    justify-content: center;
+    justify-content: $justify-content;
 }
 
-@mixin centerText {
-    text-align: center;
+@mixin displayFlex ($justify-content) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
 }
 
-@mixin operationSteps-bgColor {
-    background-color: $operation-steps-bg-color;
+@mixin Margin-Padding ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin Bgcolor-Border-radius ($bgcolor, $border-radius) {
+    background-color: $bgcolor;
+    border-radius: $border-radius;
 }
 
 * {
@@ -24,6 +32,10 @@ body {
 	margin: 0px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .location {
     background-color: rgb(235, 235, 235);
     &__city {
@@ -32,24 +44,22 @@ body {
 }
 
 .logo, .location, .booking {
-	@include centerElement();
+	@include DisplayFlex-Justify-content(center);
 }
 
 .logo {
     img {
-        padding: 20px;
-        padding-bottom: 10px;
+        padding: 20px 20px 10px 20px;
     }
 }
 
 .booking {
-	@include centerText();
-    @include operationSteps-bgColor();
+    background-color: $operation-steps-bg-color;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     article {
-        margin: 0px 20px;
-        padding: 20px 0px 50px 0px;
+        @include Margin-Padding(0px 20px, 20px 0px 80px 0px);
     }
     &__explore {
         margin-top: 50px;
@@ -60,9 +70,8 @@ body {
         border: none;
         background: linear-gradient(#d66cda, $main-color);
         box-shadow: 0px 3px 10px 2px rgb(175, 175, 175);
-        color: white;
+        color: #fff;
         cursor: pointer;
-        text-decoration: none;
         font-weight: 500;
     }
     &__title {
@@ -71,91 +80,76 @@ body {
 }
 
 .restaurants {
-    @include operationSteps-bgColor();
-    padding-top: 25px;
-    padding-bottom: 50px;
+    background-color: $operation-steps-bg-color;
+    padding: 25px 0 50px 0;
     &__title, &__card {
         margin-left: 20px;
         margin-right: 20px;
     }
     &__card {
-        background-color: white;
-        border-radius: 25px;
+        @include Bgcolor-Border-radius(#fff, 25px);
         margin-bottom: 25px;
     }
     &__card > img {
         min-width: 100%;
         max-width: 100%;
-        max-height: 280px;
+        height: 280px;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
         object-fit: cover;
     }
     &__textheart {
-        display: flex;
-        justify-content: space-between;
+        @include DisplayFlex-Justify-content(space-between);
         article {
             padding-left: 20px;
             h3 {
-                margin-bottom: 0;
-                margin-top: 15px;
+                margin: 15px 0 0 0;
             }
             p {
                 margin-top: 5px;
             }
         }
         div {
-            display: flex;
-            align-items: center;
+            @include displayFlex(); // empty argument to not add justify-content property
             padding-right: 50px;
         }
     }
     a {
-        text-decoration: none;
         color: #000;
     }
     &__newdiv {
+        @include displayFlex(flex-end);
         height: 0;
     }
     &__new {
-        background-color: #99e2d0;
+        @include Margin-Padding(85px 25px 0 0, 5px 10px);
+        @include Bgcolor-Border-radius(#99e2d0, 2px);
         color: $new-btn-text-color;
-        display: inline;
-        padding: 5px 10px;
-        border-radius: 3px;
-        position: relative;
-        bottom: 260px;
-        left: 340px;
         font-weight: 700;
+        z-index: 1;
     }
 }
 
 .operation-steps {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 0 50px 0;
     &__title {
         margin-left: 20px
     }
     &__card {
-        margin: 15px 20px 10px 20px;
-        border-radius: 15px;
-        background-color: $operation-steps-bg-color;
+        @include Margin-Padding(15px 20px 10px 20px, 10px);
+        @include Bgcolor-Border-radius($operation-steps-bg-color, 15px);
         font-weight: 700;
-        padding: 10px;
         div {
-            display: flex;
-            justify-content: space-between;
+            @include displayFlex(space-between);
             max-width: 70%;
-            align-items: center;
         }
     }
     &__number {
-        border-radius: 50%;
+        @include Bgcolor-Border-radius($main-color, 50%);
+        text-align: center;
         height: 20px;
         width: 20px;
-        background-color: $main-color;
-        text-align: center;
-        color: white;
+        color: #fff;
         position: relative;
         right: 18px;
     }
@@ -177,6 +171,10 @@ body {
     color: $main-color;
 }
 
+.fa-mobile-screen-button, .fa-list-ul, .fa-store {
+    padding-right: 15px;
+}
+
 footer {
     background-color: rgb(50, 50, 50);
     padding: 25px;
@@ -184,8 +182,7 @@ footer {
 
 .contact {
     a, &__link {
-        color: white;
-        text-decoration: none;
+        color: #fff;
         margin-bottom: 0;
     }
 }
