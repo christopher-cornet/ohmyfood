@@ -52,7 +52,7 @@ body {
         padding: 20px 0px 50px 0px;
     }
     &__explore {
-        margin-top: 25px;
+        margin-top: 50px;
     }
     &__button {
         padding: 15px 20px;
@@ -62,6 +62,8 @@ body {
         box-shadow: 0px 3px 10px 2px rgb(175, 175, 175);
         color: white;
         cursor: pointer;
+        text-decoration: none;
+        font-weight: 500;
     }
     &__title {
         margin: 10px 10px 0px 10px;
@@ -112,6 +114,20 @@ body {
         text-decoration: none;
         color: #000;
     }
+    &__newdiv {
+        height: 0;
+    }
+    &__new {
+        background-color: #99e2d0;
+        color: $new-btn-text-color;
+        display: inline;
+        padding: 5px 10px;
+        border-radius: 3px;
+        position: relative;
+        bottom: 260px;
+        left: 340px;
+        font-weight: 700;
+    }
 }
 
 .operation-steps {
@@ -143,6 +159,10 @@ body {
         position: relative;
         right: 18px;
     }
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .fa-location-dot {
@@ -151,6 +171,10 @@ body {
 
 .fa-utensils, .fa-handshake-angle {
     width: 35px;
+}
+
+.fa-store {
+    color: $main-color;
 }
 
 footer {
@@ -168,5 +192,10 @@ footer {
 
 /* For screens wider than 768px */
 @media screen and (min-width: 768px) {
-
+    .operation-steps {
+        &__container {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
 }/*# sourceMappingURL=style.css.map */
