@@ -1,0 +1,211 @@
+$main-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$new-btn-text-color: #008766;
+$operation-steps-bg-color: rgb(245, 245, 245);
+
+@mixin DisplayFlex-Justify-content ($justify-content) {
+    display: flex;
+    justify-content: $justify-content;
+}
+
+@mixin Margin-Padding ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin Bgcolor-Border-radius ($bgcolor, $border-radius) {
+    background-color: $bgcolor;
+    border-radius: $border-radius;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+	margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.location {
+    background-color: rgb(235, 235, 235);
+    &__city {
+        font-weight: 700;
+    }
+}
+
+.logo, .location, .booking {
+	@include DisplayFlex-Justify-content(center);
+}
+
+.logo {
+    img {
+        padding: 20px 20px 10px 20px;
+    }
+}
+
+.booking {
+    background-color: $operation-steps-bg-color;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    article {
+        @include Margin-Padding(0px 20px, 20px 0px 80px 0px);
+    }
+    &__explore {
+        margin-top: 50px;
+    }
+    &__button {
+        padding: 15px 20px;
+        border-radius: 25px;
+        border: none;
+        background: linear-gradient($secondary-color, $main-color);
+        box-shadow: 0px 3px 10px 2px rgb(175, 175, 175);
+        color: #fff;
+        font-weight: 500;
+        transition: 0.25s ease-in-out;
+        &:hover {
+            box-shadow: 0px 3px 10px 4px rgb(175, 175, 175);
+            filter: brightness(110%);
+        }
+    }
+    &__title {
+        margin: 10px 10px 0px 10px;
+    }
+}
+
+.restaurants {
+    background-color: $operation-steps-bg-color;
+    padding: 25px 0 50px 0;
+    &__title, &__card {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    &__card {
+        @include Bgcolor-Border-radius(#fff, 25px);
+        margin-bottom: 25px;
+    }
+    &__card > img {
+        min-width: 100%;
+        max-width: 100%;
+        height: 280px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        object-fit: cover;
+    }
+    &__textheart {
+        @include DisplayFlex-Justify-content(space-between);
+        article {
+            padding-left: 20px;
+            h3 {
+                margin: 15px 0 0 0;
+            }
+            p {
+                margin-top: 5px;
+            }
+        }
+        div {
+            display: flex;
+            align-items: center;
+            padding-right: 50px;
+        }
+    }
+    a {
+        color: #000;
+    }
+    &__newdiv {
+        @include DisplayFlex-Justify-content(flex-end);
+        align-items: center;
+        height: 0;
+    }
+    &__new {
+        @include Margin-Padding(85px 25px 0 0, 5px 10px);
+        @include Bgcolor-Border-radius($tertiary-color, 2px);
+        color: $new-btn-text-color;
+        font-weight: 700;
+        z-index: 1;
+    }
+}
+
+.operation-steps {
+    margin: 50px 0 50px 0;
+    &__title {
+        margin-left: 20px
+    }
+    &__card {
+        @include Margin-Padding(15px 20px 10px 20px, 10px);
+        @include Bgcolor-Border-radius($operation-steps-bg-color, 15px);
+        font-weight: 700;
+        div {
+            @include DisplayFlex-Justify-content(space-between);
+            align-items: center;
+            max-width: 70%;
+        }
+    }
+    &__number {
+        @include Bgcolor-Border-radius($main-color, 50%);
+        @include DisplayFlex-Justify-content(center);
+        align-items: center;
+        height: 20px;
+        width: 20px;
+        color: #fff;
+        position: relative;
+        right: 18px;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.fa-location-dot {
+    padding-right: 15px;
+}
+
+.fa-utensils, .fa-handshake-angle {
+    width: 35px;
+}
+
+.fa-store {
+    color: $main-color;
+}
+
+.fa-mobile-screen-button, .fa-list-ul, .fa-store {
+    padding-right: 15px;
+}
+
+footer {
+    background-color: rgb(50, 50, 50);
+    padding: 25px;
+}
+
+.contact {
+    a, &__link {
+        color: #fff;
+        margin-bottom: 0;
+    }
+}
+
+/* For screens wider than 768px (Tablet) */
+@media screen and (min-width: 768px) {
+    .operation-steps {
+        &__container {
+            flex-direction: row;
+            justify-content: center;
+        }
+        &__number {
+            height: 25px;
+            width: 40px;
+            right: 21px;
+        }
+    }
+}
+
+/* For screens wider than 768px (Desktop) */
+@media screen and (min-width: 1024px) {
+    
+}/*# sourceMappingURL=style.css.map */
