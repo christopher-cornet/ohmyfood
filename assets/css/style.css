@@ -51,7 +51,7 @@ a {
 }
 .booking__button:hover {
   box-shadow: 0px 3px 10px 4px rgb(175, 175, 175);
-  filter: brightness(110%);
+  filter: brightness(120%);
 }
 .booking__title {
   margin: 10px 10px 0px 10px;
@@ -173,7 +173,7 @@ footer {
   padding: 25px;
 }
 
-.contact a, .contact__link {
+.contact a, .contact p {
   color: #fff;
   margin-bottom: 0;
 }
@@ -191,4 +191,65 @@ footer {
   }
 }
 /* For screens wider than 768px (Desktop) */
-/*# sourceMappingURL=style.css.map */
+@media screen and (min-width: 1024px) {
+  .logo {
+    padding: 20px;
+  }
+  .booking__title {
+    font-size: 40px;
+    margin: 10px 10px 30px 10px;
+  }
+  .booking article {
+    padding: 20px 0px 50px 0px;
+  }
+  .operation-steps {
+    margin: 50px 10%;
+  }
+  .operation-steps__title {
+    margin-left: 10px;
+  }
+  .operation-steps__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .operation-steps__number {
+    height: 33px;
+    right: 24px;
+  }
+  .restaurants__title {
+    margin-left: 150px;
+  }
+  .restaurants__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    row-gap: 50px;
+    margin: 0px 150px;
+  }
+  .footer__items {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 75px 50px 0 0;
+  }
+  .footer__items svg {
+    padding-top: 8px;
+    margin-left: 50px;
+  }
+  .footer__items .contact {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .footer__items .contact__link-contact {
+    padding-left: 20px;
+  }
+  .footer__items .contact__link-mentions {
+    padding-left: 50px;
+  }
+  .footer__items .contact__link-proposal {
+    padding-right: 20px;
+  }
+} /*# sourceMappingURL=style.css.map */
