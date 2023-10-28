@@ -70,7 +70,7 @@ a {
         transition: 0.25s ease-in-out;
         &:hover {
             box-shadow: 0px 3px 10px 4px rgb(175, 175, 175);
-            filter: brightness(120%);
+            filter: brightness(110%);
         }
     }
     &__title {
@@ -140,6 +140,7 @@ a {
         @include Margin-Padding(15px 20px 10px 20px, 10px);
         @include Bgcolor-Border-radius($operation-steps-bg-color, 15px);
         font-weight: 700;
+        box-shadow: 0px 4px 10px 2px rgb(233 233 233);
         div {
             @include DisplayFlex-Justify-content(space-between);
             align-items: center;
@@ -178,6 +179,17 @@ a {
     padding-right: 15px;
 }
 
+.fa-solid.fa-heart {
+    opacity: 0;
+}
+
+.fa-regular.fa-heart:hover {
+    opacity: 0;
+    .fa-solid.fa-heart {
+        opacity: 1;
+    }
+}
+
 footer {
     background-color: rgb(50, 50, 50);
     padding: 25px;
@@ -205,7 +217,7 @@ footer {
     }
 }
 
-/* For screens wider than 768px (Desktop) */
+/* For screens wider than 1024px (Desktop) */
 @media screen and (min-width: 1024px) {
     .logo {
         padding: 20px;
@@ -239,7 +251,8 @@ footer {
 
     .restaurants {
         &__title {
-            margin-left: 150px;
+            margin-left: 10%;
+            margin-bottom: 35px;
         }
         &__grid {
             display: grid;
@@ -247,7 +260,10 @@ footer {
             grid-template-rows: repeat(2, 1fr);
             column-gap: 50px;
             row-gap: 50px;
-            margin: 0px 150px;
+            margin: 0px 10%;
+        }
+        &__card {
+            margin-left: 0;
         }
     }
 

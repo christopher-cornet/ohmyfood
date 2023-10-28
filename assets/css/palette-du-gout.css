@@ -10,162 +10,93 @@ a {
   text-decoration: none;
 }
 
-.location {
-  background-color: rgb(235, 235, 235);
-}
-.location__city {
-  font-weight: 700;
-}
-
-.logo, .location, .booking {
+.logo, .booking {
   display: flex;
   justify-content: center;
 }
 
+.fa-arrow-left {
+  position: absolute;
+  left: 0px;
+  margin-left: 30px;
+  top: 25px;
+}
+
+.logo {
+  align-items: center;
+}
 .logo img {
   padding: 20px 20px 10px 20px;
 }
-
-.booking {
-  background-color: rgb(245, 245, 245);
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-}
-.booking article {
-  margin: 0px 20px;
-  padding: 20px 0px 80px 0px;
-}
-.booking__explore {
-  margin-top: 50px;
-}
-.booking__button {
-  padding: 15px 20px;
-  border-radius: 25px;
-  border: none;
-  background: linear-gradient(#ff79da, #9356dc);
-  box-shadow: 0px 3px 10px 2px rgb(175, 175, 175);
-  color: #fff;
-  font-weight: 500;
-  transition: 0.25s ease-in-out;
-}
-.booking__button:hover {
-  box-shadow: 0px 3px 10px 4px rgb(175, 175, 175);
-  filter: brightness(110%);
-}
-.booking__title {
-  margin: 10px 10px 0px 10px;
+.logo > a {
+  color: #000;
 }
 
-.restaurants {
-  background-color: rgb(245, 245, 245);
-  padding: 25px 0 50px 0;
+.background-image {
+  position: relative;
+  z-index: 0;
 }
-.restaurants__title, .restaurants__card {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.restaurants__card {
-  background-color: #fff;
-  border-radius: 25px;
-  margin-bottom: 25px;
-}
-.restaurants__card > img {
-  min-width: 100%;
+.background-image img {
   max-width: 100%;
-  height: 280px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurants__textheart {
-  display: flex;
-  justify-content: space-between;
-}
-.restaurants__textheart article {
-  padding-left: 20px;
-}
-.restaurants__textheart article h3 {
-  margin: 15px 0 0 0;
-}
-.restaurants__textheart article p {
-  margin-top: 5px;
-}
-.restaurants__textheart div {
-  display: flex;
-  align-items: center;
-  padding-right: 50px;
-}
-.restaurants a {
-  color: #000;
-}
-.restaurants__newdiv {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 0;
-}
-.restaurants__new {
-  margin: 85px 25px 0 0;
-  padding: 5px 10px;
-  background-color: #99e2d0;
-  border-radius: 2px;
-  color: #008766;
-  font-weight: 700;
+
+.menu {
+  background-color: rgb(245, 245, 245);
+  padding-top: 30px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  margin-top: -50px;
+  position: relative;
   z-index: 1;
 }
-
-.operation-steps {
-  margin: 50px 0 50px 0;
-}
-.operation-steps__title {
-  margin-left: 20px;
-}
-.operation-steps__card {
-  margin: 15px 20px 10px 20px;
-  padding: 10px;
-  background-color: rgb(245, 245, 245);
-  border-radius: 15px;
-  font-weight: 700;
-}
-.operation-steps__card div {
+.menu__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 70%;
+  margin: 0 30px 30px 30px;
 }
-.operation-steps__number {
-  background-color: #9356dc;
-  border-radius: 50%;
+.menu__title {
+  font-family: "Shrikhand", serif;
+  font-weight: normal;
+  margin: 0;
+}
+.menu__section {
+  margin: 0 15px 50px 15px;
+}
+.menu__section > h3 {
+  font-size: 18px;
+  font-weight: normal;
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 5px;
+  max-width: 40px;
+}
+.menu__article {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 3px 10px;
   align-items: center;
-  height: 20px;
-  width: 20px;
-  color: #fff;
-  position: relative;
-  right: 18px;
+  margin-bottom: 15px;
 }
-.operation-steps__container {
-  display: flex;
-  flex-direction: column;
+.menu__article div > h1, .menu__article div > p {
+  margin: 10px;
 }
-
-.fa-location-dot {
-  padding-right: 15px;
+.menu__article div > h1 {
+  font-size: 17px;
+}
+.menu__article div > p {
+  font-size: 15px;
+}
+.menu__price {
+  margin: 25px 10px 0 0;
+  font-weight: 700;
 }
 
 .fa-utensils, .fa-handshake-angle {
   width: 35px;
-}
-
-.fa-store {
-  color: #9356dc;
-}
-
-.fa-mobile-screen-button, .fa-list-ul, .fa-store {
-  padding-right: 15px;
 }
 
 footer {
@@ -179,16 +110,5 @@ footer {
 }
 
 /* For screens wider than 768px (Tablet) */
-@media screen and (min-width: 768px) {
-  .operation-steps__container {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .operation-steps__number {
-    height: 25px;
-    width: 40px;
-    right: 21px;
-  }
-}
-/* For screens wider than 768px (Desktop) */
+/* For screens wider than 1024px (Desktop) */
 /*# sourceMappingURL=palette-du-gout.css.map */

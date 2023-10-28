@@ -31,151 +31,90 @@ a {
     text-decoration: none;
 }
 
-.location {
-    background-color: rgb(235, 235, 235);
-    &__city {
-        font-weight: 700;
-    }
-}
-
-.logo, .location, .booking {
+.logo, .booking {
 	@include DisplayFlex-Justify-content(center);
 }
 
+.fa-arrow-left {
+    position: absolute;
+    left: 0px;
+    margin-left: 30px;
+    top: 25px;
+}
+
 .logo {
+    align-items: center;
     img {
         padding: 20px 20px 10px 20px;
     }
-}
-
-.booking {
-    background-color: $operation-steps-bg-color;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    article {
-        @include Margin-Padding(0px 20px, 20px 0px 80px 0px);
-    }
-    &__explore {
-        margin-top: 50px;
-    }
-    &__button {
-        padding: 15px 20px;
-        border-radius: 25px;
-        border: none;
-        background: linear-gradient($secondary-color, $main-color);
-        box-shadow: 0px 3px 10px 2px rgb(175, 175, 175);
-        color: #fff;
-        font-weight: 500;
-        transition: 0.25s ease-in-out;
-        &:hover {
-            box-shadow: 0px 3px 10px 4px rgb(175, 175, 175);
-            filter: brightness(110%);
-        }
-    }
-    &__title {
-        margin: 10px 10px 0px 10px;
-    }
-}
-
-.restaurants {
-    background-color: $operation-steps-bg-color;
-    padding: 25px 0 50px 0;
-    &__title, &__card {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    &__card {
-        @include Bgcolor-Border-radius(#fff, 25px);
-        margin-bottom: 25px;
-    }
-    &__card > img {
-        min-width: 100%;
-        max-width: 100%;
-        height: 280px;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        object-fit: cover;
-    }
-    &__textheart {
-        @include DisplayFlex-Justify-content(space-between);
-        article {
-            padding-left: 20px;
-            h3 {
-                margin: 15px 0 0 0;
-            }
-            p {
-                margin-top: 5px;
-            }
-        }
-        div {
-            display: flex;
-            align-items: center;
-            padding-right: 50px;
-        }
-    }
-    a {
+    > a {
         color: #000;
     }
-    &__newdiv {
-        @include DisplayFlex-Justify-content(flex-end);
-        align-items: center;
-        height: 0;
-    }
-    &__new {
-        @include Margin-Padding(85px 25px 0 0, 5px 10px);
-        @include Bgcolor-Border-radius($tertiary-color, 2px);
-        color: $new-btn-text-color;
-        font-weight: 700;
-        z-index: 1;
+}
+
+.background-image {
+    position: relative;
+    z-index: 0;
+    img {
+        max-width: 100%;
+        object-fit: cover;
     }
 }
 
-.operation-steps {
-    margin: 50px 0 50px 0;
-    &__title {
-        margin-left: 20px
+.menu {
+    background-color: rgb(245, 245, 245);
+    padding-top: 30px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+    &__header {
+        @include DisplayFlex-Justify-content(space-between);
+        align-items: center;
+        margin: 0 30px 30px 30px;
     }
-    &__card {
-        @include Margin-Padding(15px 20px 10px 20px, 10px);
-        @include Bgcolor-Border-radius($operation-steps-bg-color, 15px);
-        font-weight: 700;
-        div {
-            @include DisplayFlex-Justify-content(space-between);
-            align-items: center;
-            max-width: 70%;
+    &__title {
+        font-family: 'Shrikhand', serif;
+        font-weight: normal;
+        margin: 0;
+    }
+    &__section {
+        margin: 0 15px 50px 15px;
+
+        > h3 {
+            font-size: 18px;
+            font-weight: normal;
+            border-bottom: 3px solid $tertiary-color;
+            padding-bottom: 5px;
+            max-width: 40px;
         }
     }
-    &__number {
-        @include Bgcolor-Border-radius($main-color, 50%);
-        @include DisplayFlex-Justify-content(center);
+    &__article {
+        @include DisplayFlex-Justify-content(space-between);
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 3px 10px;
         align-items: center;
-        height: 20px;
-        width: 20px;
-        color: #fff;
-        position: relative;
-        right: 18px;
+        margin-bottom: 15px;
+        div > h1, div > p {
+            margin: 10px;
+        }
+        div > h1 {
+            font-size: 17px;
+        }
+        div > p {
+            font-size: 15px;
+        }
     }
-    &__container {
-        display: flex;
-        flex-direction: column;
+    &__price {
+        margin: 25px 10px 0 0;
+        font-weight: 700;
     }
-}
-
-.fa-location-dot {
-    padding-right: 15px;
 }
 
 .fa-utensils, .fa-handshake-angle {
     width: 35px;
-}
-
-.fa-store {
-    color: $main-color;
-}
-
-.fa-mobile-screen-button, .fa-list-ul, .fa-store {
-    padding-right: 15px;
 }
 
 footer {
@@ -192,20 +131,10 @@ footer {
 
 /* For screens wider than 768px (Tablet) */
 @media screen and (min-width: 768px) {
-    .operation-steps {
-        &__container {
-            flex-direction: row;
-            justify-content: center;
-        }
-        &__number {
-            height: 25px;
-            width: 40px;
-            right: 21px;
-        }
-    }
+    
 }
 
-/* For screens wider than 768px (Desktop) */
+/* For screens wider than 1024px (Desktop) */
 @media screen and (min-width: 1024px) {
     
 }/*# sourceMappingURL=style.css.map */
