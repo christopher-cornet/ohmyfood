@@ -70,7 +70,7 @@ a {
         transition: 0.25s ease-in-out;
         &:hover {
             box-shadow: 0px 3px 10px 4px rgb(175, 175, 175);
-            filter: brightness(110%);
+            filter: brightness(120%);
         }
     }
     &__title {
@@ -184,7 +184,7 @@ footer {
 }
 
 .contact {
-    a, &__link {
+    a, p {
         color: #fff;
         margin-bottom: 0;
     }
@@ -207,5 +207,71 @@ footer {
 
 /* For screens wider than 768px (Desktop) */
 @media screen and (min-width: 1024px) {
-    
+    .logo {
+        padding: 20px;
+    }
+
+    .booking {
+        &__title {
+            font-size: 40px;
+            margin: 10px 10px 30px 10px;
+        }
+        article {
+            padding: 20px 0px 50px 0px;
+        }
+    }
+
+    .operation-steps {
+        margin: 50px 10%;
+        &__title {
+            margin-left: 10px;
+        }
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+        }
+        &__number {
+            height: 33px;
+            right: 24px;
+        }
+    }
+
+    .restaurants {
+        &__title {
+            margin-left: 150px;
+        }
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 50px;
+            row-gap: 50px;
+            margin: 0px 150px;
+        }
+    }
+
+    .footer__items {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 75px 50px 0 0;
+        svg {
+            padding-top: 8px;
+            margin-left: 50px;
+        }
+        .contact {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            &__link-contact {
+                padding-left: 20px;
+            }
+            &__link-mentions {
+                padding-left: 50px;
+            }
+            &__link-proposal {
+                padding-right: 20px;
+            }
+        }
+    }
 }/*# sourceMappingURL=style.css.map */
