@@ -59,6 +59,17 @@ a {
         max-width: 100%;
         object-fit: cover;
     }
+    .background-image__img {
+        min-width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        min-height: 240px;
+        max-height: 500px;
+    }
+}
+
+.command_button {
+    @include DisplayFlex-Justify-content(center)
 }
 
 .menu {
@@ -67,6 +78,7 @@ a {
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
     margin-top: -50px;
+    padding-bottom: 50px;
     position: relative;
     z-index: 1;
     &__header {
@@ -111,6 +123,23 @@ a {
         margin: 25px 10px 0 0;
         font-weight: 700;
     }
+    &__button {
+        padding: 15px 75px;
+        border-radius: 25px;
+        border: none;
+        background: linear-gradient($secondary-color, $main-color);
+        box-shadow: 0px 3px 10px 2px rgb(175, 175, 175);
+        color: #fff;
+        font-weight: 500;
+        transition: 0.25s ease-in-out;
+        &:hover {
+            box-shadow: 0px 3px 10px 4px rgb(175, 175, 175);
+            filter: brightness(110%);
+        }
+    }
+    &.top {
+        margin-top: -150px;
+    }
 }
 
 .fa-utensils, .fa-handshake-angle {
@@ -123,8 +152,11 @@ footer {
 }
 
 .contact {
-    a, &__link {
+    a, p {
         color: #fff;
+        margin-bottom: 0;
+    }
+    &__link-contact {
         margin-bottom: 0;
     }
 }
@@ -136,5 +168,27 @@ footer {
 
 /* For screens wider than 1024px (Desktop) */
 @media screen and (min-width: 1024px) {
-    
+    .footer__items {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 75px 50px 0 0;
+        svg {
+            padding-top: 8px;
+            margin-left: 50px;
+        }
+        .contact {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            &__link-contact {
+                padding-left: 20px;
+            }
+            &__link-mentions {
+                padding-left: 50px;
+            }
+            &__link-proposal {
+                padding-right: 20px;
+            }
+        }
+    }
 }/*# sourceMappingURL=style.css.map */
