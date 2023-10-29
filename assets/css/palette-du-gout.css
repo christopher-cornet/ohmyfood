@@ -42,12 +42,18 @@ a {
      object-fit: cover;
 }
 
+.command_button {
+  display: flex;
+  justify-content: center;
+}
+
 .menu {
   background-color: rgb(245, 245, 245);
   padding-top: 30px;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
   margin-top: -50px;
+  padding-bottom: 50px;
   position: relative;
   z-index: 1;
 }
@@ -94,6 +100,20 @@ a {
   margin: 25px 10px 0 0;
   font-weight: 700;
 }
+.menu__button {
+  padding: 15px 75px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0px 3px 10px 2px rgb(175, 175, 175);
+  color: #fff;
+  font-weight: 500;
+  transition: 0.25s ease-in-out;
+}
+.menu__button:hover {
+  box-shadow: 0px 3px 10px 4px rgb(175, 175, 175);
+  filter: brightness(110%);
+}
 
 .fa-utensils, .fa-handshake-angle {
   width: 35px;
@@ -104,11 +124,38 @@ footer {
   padding: 25px;
 }
 
-.contact a, .contact__link {
+.contact a, .contact p {
   color: #fff;
+  margin-bottom: 0;
+}
+.contact__link-contact {
   margin-bottom: 0;
 }
 
 /* For screens wider than 768px (Tablet) */
 /* For screens wider than 1024px (Desktop) */
-/*# sourceMappingURL=palette-du-gout.css.map */
+@media screen and (min-width: 1024px) {
+  .footer__items {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 75px 50px 0 0;
+  }
+  .footer__items svg {
+    padding-top: 8px;
+    margin-left: 50px;
+  }
+  .footer__items .contact {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .footer__items .contact__link-contact {
+    padding-left: 20px;
+  }
+  .footer__items .contact__link-mentions {
+    padding-left: 50px;
+  }
+  .footer__items .contact__link-proposal {
+    padding-right: 20px;
+  }
+} /*# sourceMappingURL=palette-du-gout.css.map */
