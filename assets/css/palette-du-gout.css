@@ -41,6 +41,14 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.background-image .background-image__img {
+  min-width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 240px;
+  max-height: 500px;
+}
 
 .command_button {
   display: flex;
@@ -113,6 +121,9 @@ a {
 .menu__button:hover {
   box-shadow: 0px 3px 10px 4px rgb(175, 175, 175);
   filter: brightness(110%);
+}
+.menu.top {
+  margin-top: -150px;
 }
 
 .fa-utensils, .fa-handshake-angle {
