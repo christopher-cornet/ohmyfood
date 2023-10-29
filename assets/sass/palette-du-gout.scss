@@ -168,6 +168,25 @@ footer {
 
 /* For screens wider than 1024px (Desktop) */
 @media screen and (min-width: 1024px) {
+    .background-image {
+        img {
+            min-width: 100%;
+            max-height: 40vh;
+        }
+    }
+
+    .menu {
+        margin: -50px 15% 0px 15%;
+        &__header {
+            @include DisplayFlex-Justify-content(center);
+            margin-top: 25px;
+            gap: 25px;
+        }
+        &__content {
+            padding: 0 10%;
+        }
+    }
+
     .footer__items {
         display: flex;
         flex-direction: row-reverse;
