@@ -57,11 +57,7 @@ a {
     z-index: 0;
     img {
         max-width: 100%;
-        object-fit: cover;
-    }
-    .background-image__img {
         min-width: 100%;
-        max-width: 100%;
         object-fit: cover;
         min-height: 240px;
         max-height: 500px;
@@ -93,7 +89,6 @@ a {
     }
     &__section {
         margin: 0 15px 50px 15px;
-
         > h3 {
             font-size: 18px;
             font-weight: normal;
@@ -106,9 +101,10 @@ a {
         @include DisplayFlex-Justify-content(space-between);
         background-color: #fff;
         border-radius: 15px;
-        padding: 3px 10px;
+        padding-left: 10px;
         align-items: center;
         margin-bottom: 15px;
+        overflow: hidden;
         div > h1, div > p {
             margin: 10px;
         }
@@ -118,10 +114,20 @@ a {
         div > p {
             font-size: 15px;
         }
+        &:hover {
+            .menu__check {
+                transform: translateX(0px);
+            }
+            .menu__price {
+                margin-right: 100px;
+            }
+        }
     }
     &__price {
-        margin: 25px 10px 0 0;
         font-weight: 700;
+        padding-top: 30px;
+        transition: 0.4s;
+        position: absolute;
     }
     &__button {
         padding: 15px 75px;
@@ -137,9 +143,22 @@ a {
             filter: brightness(110%);
         }
     }
-    &.top {
-        margin-top: -150px;
+    &__check {
+        background-color: $tertiary-color;
+        padding: 25px 20px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        transition: 0.4s;
+        transform: translateX(60px);
+        margin-left: 10px;
     }
+    &__price_and_check {
+        @include DisplayFlex-Justify-content(center);
+    }
+}
+
+.fa-circle-check {
+    color: #fff;
 }
 
 .fa-utensils, .fa-handshake-angle {
@@ -168,6 +187,14 @@ footer {
 
 /* For screens wider than 1024px (Desktop) */
 @media screen and (min-width: 1024px) {
+    .fa-arrow-left {
+        top: 50px;
+    }
+
+    .logo {
+        padding: 20px;
+    }
+    
     .background-image {
         img {
             min-width: 100%;

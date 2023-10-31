@@ -38,12 +38,7 @@ a {
 }
 .background-image img {
   max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.background-image .background-image__img {
   min-width: 100%;
-  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   min-height: 240px;
@@ -91,9 +86,10 @@ a {
   justify-content: space-between;
   background-color: #fff;
   border-radius: 15px;
-  padding: 3px 10px;
+  padding-left: 10px;
   align-items: center;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 .menu__article div > h1, .menu__article div > p {
   margin: 10px;
@@ -104,9 +100,17 @@ a {
 .menu__article div > p {
   font-size: 15px;
 }
+.menu__article:hover .menu__check {
+  transform: translateX(0px);
+}
+.menu__article:hover .menu__price {
+  margin-right: 100px;
+}
 .menu__price {
-  margin: 25px 10px 0 0;
   font-weight: 700;
+  padding-top: 30px;
+  transition: 0.4s;
+  position: absolute;
 }
 .menu__button {
   padding: 15px 75px;
@@ -122,8 +126,22 @@ a {
   box-shadow: 0px 3px 10px 4px rgb(175, 175, 175);
   filter: brightness(110%);
 }
-.menu.top {
-  margin-top: -150px;
+.menu__check {
+  background-color: #99e2d0;
+  padding: 25px 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: 0.4s;
+  transform: translateX(60px);
+  margin-left: 10px;
+}
+.menu__price_and_check {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-circle-check {
+  color: #fff;
 }
 
 .fa-utensils, .fa-handshake-angle {
@@ -146,6 +164,12 @@ footer {
 /* For screens wider than 768px (Tablet) */
 /* For screens wider than 1024px (Desktop) */
 @media screen and (min-width: 1024px) {
+  .fa-arrow-left {
+    top: 50px;
+  }
+  .logo {
+    padding: 20px;
+  }
   .background-image img {
     min-width: 100%;
     max-height: 40vh;
@@ -185,4 +209,4 @@ footer {
   .footer__items .contact__link-proposal {
     padding-right: 20px;
   }
-} /*# sourceMappingURL=palette-du-gout.css.map */
+} /*# sourceMappingURL=restaurants.css.map */
