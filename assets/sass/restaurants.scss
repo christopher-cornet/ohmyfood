@@ -81,6 +81,14 @@ a {
         @include DisplayFlex-Justify-content(space-between);
         align-items: center;
         margin: 0 30px 30px 30px;
+        div:hover {
+            .fa-regular.fa-heart {
+                opacity: 0;
+            }
+            .fa-solid.fa-heart {
+                opacity: 1;
+            }
+        }
     }
     &__title {
         font-family: 'Shrikhand', serif;
@@ -105,6 +113,7 @@ a {
         align-items: center;
         margin-bottom: 15px;
         overflow: hidden;
+        transform: translateX(0px);
         div > h1, div > p {
             margin: 10px;
         }
@@ -155,6 +164,9 @@ a {
     &__price_and_check {
         @include DisplayFlex-Justify-content(center);
     }
+    &__article--1, &__article--2, &__article--3 {
+        transition: 400ms;
+    }
 }
 
 .fa-circle-check {
@@ -163,6 +175,18 @@ a {
 
 .fa-utensils, .fa-handshake-angle {
     width: 35px;
+}
+
+.fa-regular.fa-heart {
+    position: relative;
+    left: 27px;
+    transition: 0.2s ease-in-out;
+}
+
+.fa-solid.fa-heart {
+    opacity: 0;
+    color: $main-color;
+    transition: 0.2s ease-in-out;
 }
 
 footer {

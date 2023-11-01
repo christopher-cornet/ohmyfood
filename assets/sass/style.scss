@@ -3,6 +3,7 @@ $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 $new-btn-text-color: #008766;
 $operation-steps-bg-color: rgb(245, 245, 245);
+$heart: linear-gradient($secondary-color, $main-color);
 
 @mixin DisplayFlex-Justify-content ($justify-content) {
     display: flex;
@@ -114,6 +115,14 @@ a {
             align-items: center;
             padding-right: 50px;
         }
+        div:hover {
+            .fa-regular.fa-heart {
+                opacity: 0;
+            }
+            .fa-solid.fa-heart {
+                opacity: 1;
+            }
+        }
     }
     a {
         color: #000;
@@ -180,15 +189,16 @@ a {
     padding-right: 15px;
 }
 
-.fa-solid.fa-heart {
-    opacity: 0;
+.fa-regular.fa-heart {
+    position: relative;
+    left: 24px;
+    transition: 0.2s ease-in-out;
 }
 
-.fa-regular.fa-heart:hover {
+.fa-solid.fa-heart {
     opacity: 0;
-    .fa-solid.fa-heart {
-        opacity: 1;
-    }
+    color: $main-color;
+    transition: 0.2s ease-in-out;
 }
 
 footer {

@@ -98,6 +98,12 @@ a {
   align-items: center;
   padding-right: 50px;
 }
+.restaurants__textheart div:hover .fa-regular.fa-heart {
+  opacity: 0;
+}
+.restaurants__textheart div:hover .fa-solid.fa-heart {
+  opacity: 1;
+}
 .restaurants a {
   color: #000;
 }
@@ -170,15 +176,16 @@ a {
   padding-right: 15px;
 }
 
-.fa-solid.fa-heart {
-  opacity: 0;
+.fa-regular.fa-heart {
+  position: relative;
+  left: 24px;
+  transition: 0.2s ease-in-out;
 }
 
-.fa-regular.fa-heart:hover {
+.fa-solid.fa-heart {
   opacity: 0;
-}
-.fa-regular.fa-heart:hover .fa-solid.fa-heart {
-  opacity: 1;
+  color: #9356dc;
+  transition: 0.2s ease-in-out;
 }
 
 footer {

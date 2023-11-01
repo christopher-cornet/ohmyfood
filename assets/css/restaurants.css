@@ -66,6 +66,12 @@ a {
   align-items: center;
   margin: 0 30px 30px 30px;
 }
+.menu__header div:hover .fa-regular.fa-heart {
+  opacity: 0;
+}
+.menu__header div:hover .fa-solid.fa-heart {
+  opacity: 1;
+}
 .menu__title {
   font-family: "Shrikhand", serif;
   font-weight: normal;
@@ -90,6 +96,7 @@ a {
   align-items: center;
   margin-bottom: 15px;
   overflow: hidden;
+  transform: translateX(0px);
 }
 .menu__article div > h1, .menu__article div > p {
   margin: 10px;
@@ -139,6 +146,9 @@ a {
   display: flex;
   justify-content: center;
 }
+.menu__article--1, .menu__article--2, .menu__article--3 {
+  transition: 400ms;
+}
 
 .fa-circle-check {
   color: #fff;
@@ -146,6 +156,18 @@ a {
 
 .fa-utensils, .fa-handshake-angle {
   width: 35px;
+}
+
+.fa-regular.fa-heart {
+  position: relative;
+  left: 27px;
+  transition: 0.2s ease-in-out;
+}
+
+.fa-solid.fa-heart {
+  opacity: 0;
+  color: #9356dc;
+  transition: 0.2s ease-in-out;
 }
 
 footer {
