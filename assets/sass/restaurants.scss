@@ -97,7 +97,7 @@ a {
     }
     &__section {
         margin: 0 15px 50px 15px;
-        > h3 {
+        > h2 {
             font-size: 18px;
             font-weight: normal;
             border-bottom: 3px solid $tertiary-color;
@@ -114,13 +114,13 @@ a {
         margin-bottom: 15px;
         overflow: hidden;
         transform: translateX(0px);
-        div > h1, div > p {
+        section > h3, section > p {
             margin: 10px;
         }
-        div > h1 {
+        section > h3 {
             font-size: 17px;
         }
-        div > p {
+        section > p {
             font-size: 15px;
         }
         &:hover {
@@ -134,7 +134,7 @@ a {
     }
     &__price {
         font-weight: 700;
-        padding-top: 30px;
+        padding-top: 25px;
         transition: 0.4s;
         position: absolute;
     }

@@ -80,7 +80,7 @@ a {
 .menu__section {
   margin: 0 15px 50px 15px;
 }
-.menu__section > h3 {
+.menu__section > h2 {
   font-size: 18px;
   font-weight: normal;
   border-bottom: 3px solid #99e2d0;
@@ -98,13 +98,13 @@ a {
   overflow: hidden;
   transform: translateX(0px);
 }
-.menu__article div > h1, .menu__article div > p {
+.menu__article section > h3, .menu__article section > p {
   margin: 10px;
 }
-.menu__article div > h1 {
+.menu__article section > h3 {
   font-size: 17px;
 }
-.menu__article div > p {
+.menu__article section > p {
   font-size: 15px;
 }
 .menu__article:hover .menu__check {
@@ -115,7 +115,7 @@ a {
 }
 .menu__price {
   font-weight: 700;
-  padding-top: 30px;
+  padding-top: 25px;
   transition: 0.4s;
   position: absolute;
 }
