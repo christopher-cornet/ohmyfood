@@ -25,6 +25,7 @@ $operation-steps-bg-color: rgb(245, 245, 245);
 
 body {
 	margin: 0px;
+    overflow-x: hidden;
 }
 
 a {
@@ -66,6 +67,15 @@ a {
 
 .command_button {
     @include DisplayFlex-Justify-content(center)
+}
+
+@keyframes moveMenus {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .menu {
@@ -113,7 +123,6 @@ a {
         align-items: center;
         margin-bottom: 15px;
         overflow: hidden;
-        transform: translateX(0px);
         section > h3, section > p {
             margin: 10px;
         }
@@ -122,6 +131,9 @@ a {
         }
         section > p {
             font-size: 15px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
         &:hover {
             .menu__check {
@@ -164,8 +176,17 @@ a {
     &__price_and_check {
         @include DisplayFlex-Justify-content(center);
     }
-    &__article--1, &__article--2, &__article--3 {
-        transition: 400ms;
+    &__article--group1 {
+        animation-name: moveMenus;
+        animation-duration: 0.25s;
+    }
+    &__article--group2 {
+        animation-name: moveMenus;
+        animation-duration: 0.5s;
+    }
+    &__article--group3 {
+        animation-name: moveMenus;
+        animation-duration: 0.75s;
     }
 }
 

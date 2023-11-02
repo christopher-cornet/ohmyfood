@@ -25,6 +25,8 @@ $operation-steps-bg-color: rgb(245, 245, 245);
 
 body {
 	margin: 0px;
+    animation-name: bodyOverflow;
+    animation-duration: 6.5s;
 }
 
 a {
@@ -160,6 +162,12 @@ a {
             max-width: 70%;
         }
     }
+    &__card:hover {
+        background-color: #9256dc25;
+        i {
+            color: $main-color;
+        }
+    }
     &__number {
         @include Bgcolor-Border-radius($main-color, 50%);
         @include DisplayFlex-Justify-content(center);
@@ -173,6 +181,15 @@ a {
     &__container {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@keyframes bodyOverflow {
+    0% {
+        overflow-y: hidden;
+    }
+    100% {
+        overflow-y: scroll;
     }
 }
 
@@ -242,10 +259,6 @@ a {
 
 .fa-utensils, .fa-handshake-angle {
     width: 35px;
-}
-
-.fa-store {
-    color: $main-color;
 }
 
 .fa-mobile-screen-button, .fa-list-ul, .fa-store {

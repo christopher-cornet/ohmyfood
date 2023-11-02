@@ -4,6 +4,7 @@
 
 body {
   margin: 0px;
+  overflow-x: hidden;
 }
 
 a {
@@ -50,6 +51,14 @@ a {
   justify-content: center;
 }
 
+@keyframes moveMenus {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .menu {
   background-color: rgb(245, 245, 245);
   padding-top: 30px;
@@ -96,7 +105,6 @@ a {
   align-items: center;
   margin-bottom: 15px;
   overflow: hidden;
-  transform: translateX(0px);
 }
 .menu__article section > h3, .menu__article section > p {
   margin: 10px;
@@ -106,6 +114,9 @@ a {
 }
 .menu__article section > p {
   font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu__article:hover .menu__check {
   transform: translateX(0px);
@@ -146,8 +157,17 @@ a {
   display: flex;
   justify-content: center;
 }
-.menu__article--1, .menu__article--2, .menu__article--3 {
-  transition: 400ms;
+.menu__article--group1 {
+  animation-name: moveMenus;
+  animation-duration: 0.25s;
+}
+.menu__article--group2 {
+  animation-name: moveMenus;
+  animation-duration: 0.5s;
+}
+.menu__article--group3 {
+  animation-name: moveMenus;
+  animation-duration: 0.75s;
 }
 
 .fa-circle-check {
