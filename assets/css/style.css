@@ -83,6 +83,7 @@ a {
 .restaurants__textheart {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .restaurants__textheart article {
   padding-left: 20px;
@@ -96,7 +97,9 @@ a {
 .restaurants__textheart div {
   display: flex;
   align-items: center;
-  padding-right: 50px;
+  margin-right: 100px;
+  width: 0;
+  height: 24px;
 }
 .restaurants__textheart div:hover .fa-regular.fa-heart {
   opacity: 0;
@@ -158,6 +161,64 @@ a {
 .operation-steps__container {
   display: flex;
   flex-direction: column;
+}
+
+@keyframes loaderItems {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes loaderHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+.loader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(45deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 35%, rgb(153, 226, 208) 100%);
+  animation-name: loaderHide;
+  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+.loader__items {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.loader__icons {
+  padding-top: 50px;
+}
+.loader i {
+  animation-name: loaderItems;
+}
+.loader i:nth-child(1) {
+  animation-duration: 0.5s;
+}
+.loader i:nth-child(2) {
+  padding: 0 50px;
+  animation-duration: 1s;
+}
+.loader i:nth-child(3) {
+  animation-duration: 1.25s;
 }
 
 .fa-location-dot {

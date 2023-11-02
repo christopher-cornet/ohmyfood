@@ -3,7 +3,6 @@ $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 $new-btn-text-color: #008766;
 $operation-steps-bg-color: rgb(245, 245, 245);
-$heart: linear-gradient($secondary-color, $main-color);
 
 @mixin DisplayFlex-Justify-content ($justify-content) {
     display: flex;
@@ -101,6 +100,7 @@ a {
     }
     &__textheart {
         @include DisplayFlex-Justify-content(space-between);
+        align-items: center;
         article {
             padding-left: 20px;
             h3 {
@@ -113,7 +113,10 @@ a {
         div {
             display: flex;
             align-items: center;
-            padding-right: 50px;
+            margin-right: 100px;
+            // Set a height and width to make sure we can't hover too far over the core as it looks inconsistent
+            width: 0;
+            height: 24px;
         }
         div:hover {
             .fa-regular.fa-heart {
@@ -170,6 +173,66 @@ a {
     &__container {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@keyframes loaderItems {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes loaderHide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(45deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 35%, rgba(153,226,208,1) 100%);
+    animation-name: loaderHide;
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    &__items {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    &__icons {
+        padding-top: 50px;
+    }
+    i {
+        animation-name: loaderItems;
+    }
+    i:nth-child(1) {
+        animation-duration: 0.5s;
+    }
+    i:nth-child(2) {
+        padding: 0 50px;
+        animation-duration: 1s;
+    }
+    i:nth-child(3) {
+        animation-duration: 1.25s;
     }
 }
 
