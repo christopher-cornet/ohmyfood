@@ -81,6 +81,14 @@ a {
         @include DisplayFlex-Justify-content(space-between);
         align-items: center;
         margin: 0 30px 30px 30px;
+        div:hover {
+            .fa-regular.fa-heart {
+                opacity: 0;
+            }
+            .fa-solid.fa-heart {
+                opacity: 1;
+            }
+        }
     }
     &__title {
         font-family: 'Shrikhand', serif;
@@ -89,7 +97,7 @@ a {
     }
     &__section {
         margin: 0 15px 50px 15px;
-        > h3 {
+        > h2 {
             font-size: 18px;
             font-weight: normal;
             border-bottom: 3px solid $tertiary-color;
@@ -105,13 +113,14 @@ a {
         align-items: center;
         margin-bottom: 15px;
         overflow: hidden;
-        div > h1, div > p {
+        transform: translateX(0px);
+        section > h3, section > p {
             margin: 10px;
         }
-        div > h1 {
+        section > h3 {
             font-size: 17px;
         }
-        div > p {
+        section > p {
             font-size: 15px;
         }
         &:hover {
@@ -125,7 +134,7 @@ a {
     }
     &__price {
         font-weight: 700;
-        padding-top: 30px;
+        padding-top: 25px;
         transition: 0.4s;
         position: absolute;
     }
@@ -155,6 +164,9 @@ a {
     &__price_and_check {
         @include DisplayFlex-Justify-content(center);
     }
+    &__article--1, &__article--2, &__article--3 {
+        transition: 400ms;
+    }
 }
 
 .fa-circle-check {
@@ -163,6 +175,18 @@ a {
 
 .fa-utensils, .fa-handshake-angle {
     width: 35px;
+}
+
+.fa-regular.fa-heart {
+    position: relative;
+    left: 27px;
+    transition: 0.2s ease-in-out;
+}
+
+.fa-solid.fa-heart {
+    opacity: 0;
+    color: $main-color;
+    transition: 0.2s ease-in-out;
 }
 
 footer {
