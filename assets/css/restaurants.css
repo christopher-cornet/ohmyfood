@@ -1,9 +1,18 @@
+@keyframes moveMenus {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0px;
+  overflow-x: hidden;
 }
 
 a {
@@ -96,10 +105,15 @@ a {
   align-items: center;
   margin-bottom: 15px;
   overflow: hidden;
-  transform: translateX(0px);
+}
+.menu__article section {
+  max-width: 60%;
 }
 .menu__article section > h3, .menu__article section > p {
   margin: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu__article section > h3 {
   font-size: 17px;
@@ -146,8 +160,17 @@ a {
   display: flex;
   justify-content: center;
 }
-.menu__article--1, .menu__article--2, .menu__article--3 {
-  transition: 400ms;
+.menu__article--group1 {
+  animation-name: moveMenus;
+  animation-duration: 0.25s;
+}
+.menu__article--group2 {
+  animation-name: moveMenus;
+  animation-duration: 0.5s;
+}
+.menu__article--group3 {
+  animation-name: moveMenus;
+  animation-duration: 0.75s;
 }
 
 .fa-circle-check {

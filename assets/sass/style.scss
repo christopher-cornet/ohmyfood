@@ -19,12 +19,48 @@ $operation-steps-bg-color: rgb(245, 245, 245);
     border-radius: $border-radius;
 }
 
+@keyframes bodyOverflow {
+    0% {
+        overflow-y: hidden;
+    }
+    100% {
+        overflow-y: scroll;
+    }
+}
+
+@keyframes loaderItems {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes loaderHide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
 	margin: 0px;
+    animation-name: bodyOverflow;
+    animation-duration: 6.5s;
 }
 
 a {
@@ -160,6 +196,12 @@ a {
             max-width: 70%;
         }
     }
+    &__card:hover {
+        background-color: #9256dc25;
+        i {
+            color: $main-color;
+        }
+    }
     &__number {
         @include Bgcolor-Border-radius($main-color, 50%);
         @include DisplayFlex-Justify-content(center);
@@ -176,31 +218,10 @@ a {
     }
 }
 
-@keyframes loaderItems {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes loaderHide {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        display: none;
-    }
-}
-
 .loader {
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
@@ -242,10 +263,6 @@ a {
 
 .fa-utensils, .fa-handshake-angle {
     width: 35px;
-}
-
-.fa-store {
-    color: $main-color;
 }
 
 .fa-mobile-screen-button, .fa-list-ul, .fa-store {

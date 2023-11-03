@@ -19,12 +19,22 @@ $operation-steps-bg-color: rgb(245, 245, 245);
     border-radius: $border-radius;
 }
 
+@keyframes moveMenus {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
 
 body {
 	margin: 0px;
+    overflow-x: hidden;
 }
 
 a {
@@ -113,9 +123,14 @@ a {
         align-items: center;
         margin-bottom: 15px;
         overflow: hidden;
-        transform: translateX(0px);
+        section {
+            max-width: 60%;
+        }
         section > h3, section > p {
             margin: 10px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
         section > h3 {
             font-size: 17px;
@@ -164,8 +179,17 @@ a {
     &__price_and_check {
         @include DisplayFlex-Justify-content(center);
     }
-    &__article--1, &__article--2, &__article--3 {
-        transition: 400ms;
+    &__article--group1 {
+        animation-name: moveMenus;
+        animation-duration: 0.25s;
+    }
+    &__article--group2 {
+        animation-name: moveMenus;
+        animation-duration: 0.5s;
+    }
+    &__article--group3 {
+        animation-name: moveMenus;
+        animation-duration: 0.75s;
     }
 }
 
@@ -203,6 +227,7 @@ footer {
         margin-bottom: 0;
     }
 }
+
 
 /* For screens wider than 768px (Tablet) */
 @media screen and (min-width: 768px) {
