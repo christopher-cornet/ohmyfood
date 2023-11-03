@@ -1,3 +1,11 @@
+@keyframes moveMenus {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -51,14 +59,6 @@ a {
   justify-content: center;
 }
 
-@keyframes moveMenus {
-  from {
-    transform: translateX(100vw);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
 .menu {
   background-color: rgb(245, 245, 245);
   padding-top: 30px;

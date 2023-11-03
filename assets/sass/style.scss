@@ -19,8 +19,42 @@ $operation-steps-bg-color: rgb(245, 245, 245);
     border-radius: $border-radius;
 }
 
+@keyframes bodyOverflow {
+    0% {
+        overflow-y: hidden;
+    }
+    100% {
+        overflow-y: scroll;
+    }
+}
+
+@keyframes loaderItems {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes loaderHide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
 * {
     font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -184,40 +218,10 @@ a {
     }
 }
 
-@keyframes bodyOverflow {
-    0% {
-        overflow-y: hidden;
-    }
-    100% {
-        overflow-y: scroll;
-    }
-}
-
-@keyframes loaderItems {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes loaderHide {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        display: none;
-    }
-}
-
 .loader {
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;

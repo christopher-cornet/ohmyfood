@@ -19,6 +19,15 @@ $operation-steps-bg-color: rgb(245, 245, 245);
     border-radius: $border-radius;
 }
 
+@keyframes moveMenus {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -67,15 +76,6 @@ a {
 
 .command_button {
     @include DisplayFlex-Justify-content(center)
-}
-
-@keyframes moveMenus {
-    from {
-        transform: translateX(100vw);
-    }
-    to {
-        transform: translateX(0);
-    }
 }
 
 .menu {
