@@ -123,17 +123,20 @@ a {
         align-items: center;
         margin-bottom: 15px;
         overflow: hidden;
+        section {
+            max-width: 60%;
+        }
         section > h3, section > p {
             margin: 10px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
         section > h3 {
             font-size: 17px;
         }
         section > p {
             font-size: 15px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
         }
         &:hover {
             .menu__check {
@@ -224,6 +227,7 @@ footer {
         margin-bottom: 0;
     }
 }
+
 
 /* For screens wider than 768px (Tablet) */
 @media screen and (min-width: 768px) {

@@ -106,17 +106,20 @@ a {
   margin-bottom: 15px;
   overflow: hidden;
 }
+.menu__article section {
+  max-width: 60%;
+}
 .menu__article section > h3, .menu__article section > p {
   margin: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu__article section > h3 {
   font-size: 17px;
 }
 .menu__article section > p {
   font-size: 15px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .menu__article:hover .menu__check {
   transform: translateX(0px);
