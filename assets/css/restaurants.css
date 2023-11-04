@@ -162,15 +162,15 @@ a {
 }
 .menu__article--group1 {
   animation-name: moveMenus;
-  animation-duration: 0.25s;
+  animation-duration: 0.75s;
 }
 .menu__article--group2 {
   animation-name: moveMenus;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
 }
 .menu__article--group3 {
   animation-name: moveMenus;
-  animation-duration: 0.75s;
+  animation-duration: 1.25s;
 }
 
 .fa-circle-check {
