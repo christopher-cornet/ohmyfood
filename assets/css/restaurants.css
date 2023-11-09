@@ -50,8 +50,7 @@ a {
   min-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  min-height: 240px;
-  max-height: 500px;
+  height: 30vh;
 }
 
 .command_button {
@@ -107,7 +106,8 @@ a {
   overflow: hidden;
 }
 .menu__article section {
-  max-width: 60%;
+  max-width: 80%;
+  transition: 0.2s;
 }
 .menu__article section > h3, .menu__article section > p {
   margin: 10px;
@@ -117,6 +117,7 @@ a {
 }
 .menu__article section > h3 {
   font-size: 17px;
+  min-width: 100%;
 }
 .menu__article section > p {
   font-size: 15px;
@@ -126,6 +127,9 @@ a {
 }
 .menu__article:hover .menu__price {
   margin-right: 100px;
+}
+.menu__article:hover section {
+  max-width: 70%;
 }
 .menu__price {
   font-weight: 700;
@@ -206,7 +210,18 @@ footer {
   margin-bottom: 0;
 }
 
+/* For screens less wide than 380px (Mobile) */
+@media screen and (max-width: 380px) {
+  .menu__article:hover section {
+    max-width: 60%;
+  }
+}
 /* For screens wider than 768px (Tablet) */
+@media screen and (min-width: 768px) {
+  .background-image img {
+    height: 50vh;
+  }
+}
 /* For screens wider than 1024px (Desktop) */
 @media screen and (min-width: 1024px) {
   .fa-arrow-left {

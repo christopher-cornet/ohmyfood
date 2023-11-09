@@ -69,8 +69,7 @@ a {
         max-width: 100%;
         min-width: 100%;
         object-fit: cover;
-        min-height: 240px;
-        max-height: 500px;
+        height: 30vh;
     }
 }
 
@@ -124,7 +123,8 @@ a {
         margin-bottom: 15px;
         overflow: hidden;
         section {
-            max-width: 60%;
+            max-width: 80%;
+            transition: 0.2s;
         }
         section > h3, section > p {
             margin: 10px;
@@ -134,6 +134,7 @@ a {
         }
         section > h3 {
             font-size: 17px;
+            min-width: 100%;
         }
         section > p {
             font-size: 15px;
@@ -144,6 +145,9 @@ a {
             }
             .menu__price {
                 margin-right: 100px;
+            }
+            section {
+                max-width: 70%;
             }
         }
     }
@@ -228,10 +232,26 @@ footer {
     }
 }
 
+/* For screens less wide than 380px (Mobile) */
+@media screen and (max-width: 380px) {
+    .menu {
+        &__article {
+            &:hover {
+                section {
+                    max-width: 60%;
+                }
+            }
+        }
+    }
+}
 
 /* For screens wider than 768px (Tablet) */
 @media screen and (min-width: 768px) {
-    
+    .background-image {
+        img {
+            height: 50vh;
+        }
+    }
 }
 
 /* For screens wider than 1024px (Desktop) */
