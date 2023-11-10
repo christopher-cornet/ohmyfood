@@ -4,4 +4,8 @@
   <br>
 </h1>
 
-![image](https://github.com/christopher-cornet/ohmyfood/assets/115154379/2c51780e-2d75-4ed4-82b6-c17f57b0ff6c)
+<div align="center">
+  
+![image](https://github.com/christopher-cornet/ohmyfood/assets/115154379/bec2ff0a-4e63-4c34-b293-2f0b51d01c0d)
+
+</div>
